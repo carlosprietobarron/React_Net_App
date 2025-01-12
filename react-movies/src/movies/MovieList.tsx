@@ -1,19 +1,19 @@
-import { pelicula } from './peliculas.model'
-import PeliculaIndividual from './PeliculaIndividual'
-import css from './ListadoPeliculas.module.css'
-import Cargando from './../utils/Cargando'
+import { movie } from './movies.model'
+import SingleMovie from './SingleMovie'
+import css from './MovieList.module.css'
+import Cargando from '../utils/Loading'
 import ListadoGenerico from './../utils/ListadoGenerico'
 
-export default function ListadoPeliculas(props: listadoPeliculasProps) {
+export default function MovieList(props: listadoPeliculasProps) {
     return (
-        <ListadoGenerico listado={props.peliculas}>
+        <GenericList movielist={props.peliculas}>
             <div className={css.div}>
-                {props.peliculas?.map(pelicula =>
-                    <PeliculaIndividual pelicula={pelicula}
-                        key={pelicula.id}
+                {props.movies?.map(pelicula =>
+                    <singlemovie movie={movie}
+                        key={movie.id}
                     />)}
             </div>
-        </ListadoGenerico>
+        </GenericList>
 
     )
 }

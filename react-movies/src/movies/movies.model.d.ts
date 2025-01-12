@@ -1,10 +1,10 @@
-export interface pelicula{
+export interface movie{
     id: number;
-    titulo: string;
+    title: string;
     poster: string;
 }
 
 export interface landingPageDTO {
-    enCartelera?: pelicula[];
-    proximosEstrenos?: pelicula[];
+    onTeather?: pelicula[];
+    commingSoon?: pelicula[];
 }

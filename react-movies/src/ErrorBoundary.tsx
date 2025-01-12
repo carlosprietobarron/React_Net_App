@@ -4,7 +4,7 @@ export default class ErrorBoundary extends
     React.Component<errorBoundaryProps, errorBoundaryState> {
     constructor(props: errorBoundaryProps) {
         super(props);
-        this.state = { hayError: false, mensaje: '' }
+        this.state = { error: false, mensaje: '' }
     }
 
     componentDidCatch(error: any, errorInfo: any) {
@@ -14,15 +14,15 @@ export default class ErrorBoundary extends
 
     static getDerivedStateFromError(error: any){
         console.log(error);
-        return {hayError: true, mensaje: error};
+        return {error: true, message: error};
     }
 
     render() {
-        if (this.state.hayError) {
+        if (this.state.error) {
             if (this.props.errorUI) {
                 return this.props.errorUI
             } else {
-                return <h3>{this.state.mensaje}</h3>
+                return <h3>{this.state.message}</h3>
             }
         }
 

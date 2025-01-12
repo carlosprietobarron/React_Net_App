@@ -1,7 +1,7 @@
-export default function FiltroPeliculas() {
+export default function MovieFilter() {
     return (
         <>
-            <h3>Filtrar Películas</h3>
+            <h3>Filter Movie</h3>
         </>
 
     )

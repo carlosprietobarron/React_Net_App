@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Menu from './utils/Menu';
-import rutas from './route-config'
+import routes from './route-config'
 
 function App() {
   return (
@@ -12,10 +12,10 @@ function App() {
         <Menu />
         <div className="container">
           <Switch>
-            {rutas.map(ruta => 
-            <Route key={ruta.path} path={ruta.path}
-              exact={ruta.exact}>
-                <ruta.componente />
+            {routes.map(route => 
+            <Route key={route.path} path={route.path}
+              exact={route.exact}>
+                <route.componente />
               </Route>)}
           </Switch>
         </div>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function IndiceGeneros() {
+export default function IndexGeneres() {
     return (
         <>
             <h3>Indice Géneros</h3>
